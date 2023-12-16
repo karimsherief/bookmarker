@@ -42,6 +42,7 @@ let updatedId = null;
   }
 })();
 
+// Handle Add / Update
 function handleSubmit(e) {
   e.preventDefault();
 
@@ -153,6 +154,7 @@ function hideModal() {
   rules.innerHTML = "";
 }
 
+// Validate on submit
 function isValid() {
   let flag = true;
 
@@ -176,8 +178,8 @@ function isValid() {
   return flag;
 }
 
+// Validate on input
 function validateSiteName(e) {
-
   if (e.target.value.match(SiteNameRegex)) {
     e.target.classList.remove("form__input--error");
     e.target.classList.add("form__input--success");
